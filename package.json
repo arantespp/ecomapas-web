@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:web": "firebase deploy --only hosting",
+    "deploy": "npm run deploy:functions && npm run deploy:web"
   },
   "author": "",
   "license": "ISC",

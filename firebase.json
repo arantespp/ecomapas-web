@@ -6,7 +6,10 @@
     ]
   },
   "hosting": {
-    "public": "public",
+    "public": "web/dist/web",
+    "predeploy": [
+      "npm run build --prefix web -- --prod"
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
